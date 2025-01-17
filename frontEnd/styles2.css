@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+    color: #ffffff; /* Light blue text */
+    background-color: #1e1e2f; /* Dark gray background */
+    padding-left: 27%;
+    padding-right: 27%;
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+    color: #80bfff; /* Sky blue headings */
+}
+
+section {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #4d4d66; /* Medium dark blue-gray border */
+    padding-bottom: 10px;
+}
+
+.movie-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.movie {
+    background-color: #2a2a3e; /* Darker gray-blue for movie cards */
+    color: #b3d9ff; /* Lighter blue text */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+button {
+    background-color: #2a4d6f; /* Dark blue for buttons */
+    color: #e0e0ff; /* Light blue text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    margin: 2px;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next row */
+}
+
+button:hover {
+    background-color: #3d6e96; /* Lighter blue on hover */
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    color: #b3d9ff; /* Lighter blue for labels */
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #4d6e8a; /* Medium blue border */
+    border-radius: 5px;
+    text-align: center;
+    background-color: #2a2a3e; /* Darker gray-blue input background */
+    color: #e0e0ff; /* Light blue text */
+}
+
+input::placeholder {
+    color: #9eb3d4; /* Subtle light blue placeholder text */
+}
+
+#response-output-hidden-top,
+#response-output-hidden-bottom {
+    white-space: pre-wrap; /* Ensures text wraps within the element */
+    word-wrap: break-word; /* Breaks long words to avoid overflowing */
+    display: block; /* Ensure it is a block element when visible */
+    width: 100%; /* Take full width of the container */
+    margin: 10px 0; /* Optional: adds some margin for spacing */
+    padding: 10px; /* Optional: adds padding for content */
+    border: 1px solid #4d4d66; /* Medium dark blue-gray border */
+    background-color: #2a2a3e; /* Darker gray-blue background */
+    color: #ffffff; /* Light blue text */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
