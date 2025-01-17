@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section class="top-movies">
+        <h2>Rotten Tomatoes Rating: Top 10 Movies</h2>
+        <div class="movie-grid" id="top-movies">
+            <!-- Movie buttons will be dynamically generated -->
+            <pre id="response-output-hidden-top"></pre>
+        </div>
+    </section>
+
+    <section class="admin-controls">
+        <h2>Admin</h2>
+        <div class="admin-buttons">
+            <button type="button" onclick="create_the_database()">Create Database</button>
+            <button type="button" onclick="delete_the_database()">Delete Database</button>
+            <div id="message_box"></div>
+        </div>
+        <pre id="message_box"></pre>
+    </section>
+
+    <section class="search-filters">
+        <h2>Search by Filters</h2>
+        <div class="filter-grid">
+            <div class="filter-row">
+                <label>Search by Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter movie title">
+
+                <label>Search by Genre</label>
+                <input type="text" id="major_genre" name="major_genre" placeholder="Enter genre title">
+
+            </div>
+            <div class="filter-row">
+                <label>Release Date</label>
+                <input type="date" id="release_date">
+
+                <label>Sort Alphabetically</label>
+                <select id="alphabetSort" name="alphabetSort">
+                    <option value="ascending">A-Z (Ascending)</option>
+                    <option value="descending">Z-A (Descending)</option>
+                </select>
+
+            </div>
+            <div class="filter-row">
+                <label>Rotten Tomatoes Greater Than</label>
+                <input type="number" id="rotten_tomatoes_rating" min="0" step="1" value="0"
+                    oninput="this.value = this.value.replace(/-/g, '');">
+
+                <label>Number of Items to Load</label>
+                <input type="number" id="Number_of_Items" min="0" step="1" value="0"
+                    oninput="this.value = this.value.replace(/-/g, '');">
+            </div>
+        </div>
+    </section>
+
+    <!-- Load Entries Bottom Section -->
+    <section class="bottom-movies">
+        <!-- Movie buttons will be dynamically generated -->
+        <button type="button" onclick="submit_button()">Load Entries</button>
+        <!-- <pre id="response-output-hidden-bottom" style="display: none;"></pre> -->
+        <pre id="response-output-hidden-bottom" style="display: none;"></pre>
+    </section>
+</body>
+
+</html>
